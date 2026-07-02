@@ -1,0 +1,25 @@
+info:
+  name: Buscar endereços
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{servidor}}/address/person/:person_id?page=1&limit=10"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+    - name: person_id
+      value: "8"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

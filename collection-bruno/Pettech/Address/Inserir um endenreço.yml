@@ -1,0 +1,25 @@
+info:
+  name: Inserir um endenreço
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{servidor}}/address"
+  body:
+    type: json
+    data: |-
+      {
+        "street": "Rua dos imigrantes",
+        "city": "Anta Gorda",
+        "state": "RS",
+        "zip_code": "95980000",
+        "person_id": 8
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

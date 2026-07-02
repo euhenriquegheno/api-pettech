@@ -1,0 +1,25 @@
+info:
+  name: Criar um registro de uma pessoa
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{servidor}}/person"
+  body:
+    type: json
+    data: |-
+      {
+        "cpf": "03640033086",
+        "name": "Henrique Gheno",
+        "birth": "2004-06-04",
+        "email": "euhenriquegheno@gmail.com",
+        "user_id": 3
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

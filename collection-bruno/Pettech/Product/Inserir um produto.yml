@@ -1,0 +1,30 @@
+info:
+  name: Inserir um produto
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{servidor}}/product"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Teste 3",
+        "description": "teste descrição",
+        "image": "",
+        "price": 10.50,
+        "categories": [
+          {
+            "id": 2,
+            "name": "Categoria 2"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

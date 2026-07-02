@@ -1,0 +1,19 @@
+info:
+  name: Excluir um produto
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{servidor}}/product/:id"
+  params:
+    - name: id
+      value: d6f6e62b-712f-4240-a7b0-464a2f9584d6
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
