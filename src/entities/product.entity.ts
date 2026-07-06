@@ -23,7 +23,7 @@ export class Product implements IProduct {
   description: string
 
   @Column({ name: 'image_url', type: 'varchar' })
-  image_url: string
+  image: string
 
   @Column({ name: 'price', type: 'double precision' })
   price: number
