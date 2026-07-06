@@ -8,9 +8,11 @@ http:
   url: "{{servidor}}/user/:id"
   params:
     - name: id
-      value: "3"
+      value: "9"
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1bHUiLCJpYXQiOjE3ODMzODA1ODEsImV4cCI6MTc4MzM4MTE4MX0.VLRNHhmCOn1kbRsFZznjemQ8L8K88jpxfHz82B2Rmpo
 
 settings:
   encodeUrl: true

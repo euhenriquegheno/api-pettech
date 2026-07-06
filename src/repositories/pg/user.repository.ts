@@ -4,6 +4,14 @@ import { database } from '../../lib/pg/db'
 import { IUserRepository } from '../user.repository.interface'
 
 export class UserRepository implements IUserRepository {
+  async findByUsername(username: string): Promise<IUser | undefined> {
+    const result = await database.clientInstance?.query<IUser>(
+      `SELECT * FROM "user" WHERE username = $1`,
+      [username],
+    )
+    return result?.rows[0]
+  }
+
   public async create({
     username,
     password,
